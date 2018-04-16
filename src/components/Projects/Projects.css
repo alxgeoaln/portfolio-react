@@ -1,0 +1,11 @@
+.projectTitle {
+  font-weight: bold;
+  font-size: 50px; 
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.projectTitle :hover {
+  opacity: 1 !important;
+  color: red !important
+}

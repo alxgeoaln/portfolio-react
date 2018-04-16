@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css');
+
+
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', sans-serif !important;
+    color: #363237 !important;
+  }
+  
+  p {
+    font-size: 1.3em;
+    line-height: 170%;
+    font-family: 'Raleway', sans-serif !important;
+    color: #363237 !important;
+  }
+  
+  body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  input.transparent-input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+  }
+  
+  
+  input:focus, textarea:focus {outline: none;}
+  .btn:focus{
+    outline: none !important;
+  }
+  
+  .body-border {
+    border-bottom: 8px solid #363237;
+    border-right: 8px solid #363237;
+    border-left: 8px solid #363237;
+  }
+  
+  
+  .body-border-fixed { 
+    border-top: 8px solid #363237;
+    position: fixed;
+  }
+  
+  .nav-button a:hover {
+    text-decoration: underline #EDB83D !important;
+    border-radius: 0px;
+    font-weight: bold;
+    background-color: white !important;
+    color: #363237 !important;
+  }
+  
+  .primary-font {
+    font-family: 'Raleway', sans-serif !important;
+  }
+  
+  .header a {
+    color: #363237;
+  }
+  
+  .header {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .sub-title {
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .about-section {
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .services-section {
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  #social-media {
+    margin-bottom: 10px;
+  }
+  
+  
+  .link-button {
+    color: #EDB83D;
+    text-decoration: none;
+  }
+  
+  .intro-text {
+    font-weight: bold;
+    font-size: 45px;
+  }
+  
+  .flash-yellow {
+    color: #EDB83D !important;
+  }
+  
+  /*TRANSITION*/
+  
+  router-outlet {
+    display: none;
+  }
+  
+  .route-container {
+    position: relative;
+  }
+  
+  .route-container > * {
+    display: block;
+  }
+  
+  /*MEDIA QUERRYS*/
+  
+  @media only screen and (max-width: 500px) {
+    .intro-text {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  
+    .title {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  
+  }
+  

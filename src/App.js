@@ -16,8 +16,8 @@ class App extends Component {
       <div className='container'  id="intro-section">
         <Header/>
         <About/>
-        <Services/>
         <Projects/>
+        <Services/>
         <Contact/>
         <Footer/>
       </div>

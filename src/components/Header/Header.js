@@ -21,8 +21,12 @@ class Header extends Component {
     render() {
         return (
             <div id="navigation" style={this.state.scrollNumber > 230 ? styles.hideHeader : styles.showHeade} className="header clearfix navbar-fixed-top header-container">
-                <nav style={{marginTop: '10px'}}>
-                    <ul className="nav nav-pills pull-right">
+                <div style={{display: 'inline-flex', marginTop: '10px'}}>
+                 <a href="/">
+                    <img  className="my-logo" src={logo} alt="logo"/>
+                </a>
+                <nav style={{marginLeft: '10px'}}>
+                    <ul className="nav nav-pills ">
                     <li className="nav-button" style={{cursor: 'pointer'}}>
                     <LinkButton to={'projects'} buttonName='Projects' />
                     </li>
@@ -32,9 +36,7 @@ class Header extends Component {
                     </li>
                     </ul>
                 </nav>
-                <a href="/">
-                    <img  className="my-logo" src={logo} alt="logo"/>
-                </a>
+                </div>
                 <hr style={{marginBottom: "0px"}}/>
                 </div>
 

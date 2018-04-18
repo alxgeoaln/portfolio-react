@@ -8,7 +8,10 @@ class Contact extends Component {
             <div>
             <div id="contact">
   <div className="text-center">
-    <h3>Want to get a project done together?</h3>
+  <div className="row">
+  <h3>Want to get a project done together?</h3>
+  </div>
+    
     <button id="email-button" style={{marginTop: '10px'}} data-toggle="modal" data-target="#exampleModalLong" className="btn btn-default btn-lg">Send me a message
     </button>
   </div>

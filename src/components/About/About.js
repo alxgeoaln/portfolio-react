@@ -41,7 +41,7 @@ class About extends Component {
                     <div className="row text-center">
                         <div className="col-md-12">
 
-                            <p>I currently work as a Software Engineer at Luxoft,
+                            <p style={{textAlign: 'left'}}>I currently work as a Software Engineer at Luxoft,
                             the place where I consume my passion for development
                             and I am also student in my first year of master’s
                             degree learning Intelligent Transport Systems.

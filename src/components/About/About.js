@@ -8,7 +8,12 @@ import me from "./../../assets/me3.jpg";
 
 class About extends Component {
 
-    componentDidMount() {
+    state = {
+        pageLoaded: false
+    }
+
+  async  componentDidMount() {
+        console.log('mount')
         const options = {
             strings: ["Web", "Mobile"],
             typeSpeed: 200,
@@ -19,19 +24,40 @@ class About extends Component {
         }
 
         this.typed = new Typed(this.el, options);
+     await   this.setState({pageLoaded: true})
+
+        // setTimeout(this.showPicture, 1000)
+       
+    }
+
+
+    hidePicture = () => {
+        document.getElementById('tesst').classList.add('hide-picture');
+    }
+
+    showPicture = () => {
+        document.getElementById('tesst').classList.add('show-picture');
     }
 
     render() {
+        console.log('render')
         return (
-            <div>
+            <div >
                 <div className="text-center" style={{ marginTop: "100px" }}>
                     <div className="row display-flex">
                         <div className="col-md-6 flex-container">
-                            <img src={me} style={{ maxHeight: '600px' }} className="img-responsive img-thumbnail center-image" alt="Alin Alexandru" />
+                            <div style={this.state.pageLoaded ? styles.showPicture : styles.hidePicture}>
+                                <img id='tesst' src={me} style={{ maxHeight: '600px' }} className="img-responsive img-thumbnail center-image" alt="Alin Alexandru" />
+                            </div>
                         </div>
                         <div className="col-md-6 flex-container align-text" style={{alignSelf: 'flex-end'}}>
-                            <h1 className="flash-yellow intro-text" style={{fontSize: '90px'}}>Hello</h1>
-                            <h1 className="intro-text" >I'm Alin. I build <br /> <span id='typed' ref={(el) => this.el = el}></span> applications</h1>
+                            <div style={this.state.pageLoaded ? styles.showHello : styles.hideHello}
+                            >
+                                <h1 className="flash-yellow intro-text" style={[{fontSize: '90px'},]}>Hello</h1>
+                            </div>
+                            <div  style={this.state.pageLoaded ? styles.showIntro : styles.hideIntro}>
+                                <h1 className="intro-text" >I'm Alin. I build <br /> <span id='typed' ref={(el) => this.el = el}></span> applications</h1>
+                            </div>
                         </div>
                     </div>
 
@@ -67,6 +93,23 @@ const styles = {
         transform: 'translateZ(0)',
         transition: 'all 1s ease'
     },
+    hidePicture: {
+        transform: 'translateX(-150%)',
+        transition: 'all 1s ease',
+    },
+    showPicture: {
+        transform: 'translateX(0)',
+        transition: 'all 1s ease',
+    },
+    showIntro: {
+        transform: 'translateX(0)',
+        transition: 'all 1s ease',
+    },
+    hideIntro: {
+        transform: 'translateX(150%)',
+        transition: 'all 1s ease',
+    }
+   
     
 }
 
